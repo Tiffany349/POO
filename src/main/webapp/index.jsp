@@ -1,0 +1,17 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.List" %>
+<%@ page import="sv.edu.udb.casoestudio.casoestudiofinal.models.Autor" %>
+<%@ page import="sv.edu.udb.casoestudio.casoestudiofinal.dao.AutorDAO" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Material - Biblioteca Metrópolis</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Biblioteca Metrópolis</h1>
+<a href="mostrarAgregarMaterial">Agregar Material</a>
+<a href="buscarMaterial.jsp">Buscar Material</a>
+
+</body>
+</html>
