@@ -1,46 +1,172 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 20px;
+/* ====== Reset & Variables ====== */
+:root{
+    --bg: #f7f7fb;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --primary: #2563eb;
+    --primary-600: #1e40af;
+    --border: #e5e7eb;
+    --ring: rgba(37, 99, 235, 0.35);
+    --shadow: 0 10px 22px rgba(0,0,0,0.08);
 }
 
-h1 {
-    color: #333;
+@media (prefers-color-scheme: dark){
+    :root{
+        --bg: #0f1115;
+        --card: #151923;
+        --text: #e5e7eb;
+        --muted: #9aa4b2;
+        --primary: #3b82f6;
+        --primary-600: #60a5fa;
+        --border: #1f2533;
+        --ring: rgba(59, 130, 246, 0.35);
+        --shadow: 0 10px 24px rgba(0,0,0,0.45);
+    }
 }
 
-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 500px;
+/* ====== Base ====== */
+* { box-sizing: border-box; }
+html, body {
+    margin: 0; padding: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    background: var(--bg);
+    color: var(--text);
+}
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ====== Layout ====== */
+body{
+    display: grid;
+    min-height: 100dvh;
+    place-items: start center;
+    padding: 40px 16px;
 }
 
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+h1{
+    font-size: clamp(1.4rem, 1.2rem + 1vw, 2rem);
+    margin: 0 0 18px;
+    letter-spacing: 0.3px;
 }
 
-input[type="text"],
-input[type="number"],
-select {
+/* ====== Card/Form ====== */
+form{
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    max-width: 760px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 22px;
 }
 
-input[type="submit"] {
-    margin-top: 20px;
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+form .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 18px;
+}
+
+@media (max-width: 680px){
+    form .grid{ grid-template-columns: 1fr; }
+}
+
+label{
+    display: block;
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+input[type="text"]{
+    width: 100%;
+    appearance: none;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 0.98rem;
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease, transform .06s ease;
+}
+
+input[type="text"]::placeholder{
+    color: var(--muted);
+    opacity: .7;
+}
+
+input[type="text"]:hover{
+    border-color: color-mix(in oklab, var(--border), var(--text) 20%);
+}
+
+input[type="text"]:focus{
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--ring);
+}
+
+button[type="submit"]{
+    margin-top: 10px;
+    display: inline-block;
+    border: 0;
+    border-radius: 12px;
+    padding: 12px 18px;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
+    transition: transform .06s ease, filter .2s ease, background .2s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+button[type="submit"]:hover{
+    filter: brightness(1.03);
+    background: var(--primary-600);
+}
+
+button[type="submit"]:active{
+    transform: translateY(1px);
+}
+
+/* ====== Header/Links ====== */
+.page-header{
+    width: 100%;
+    max-width: 760px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.back-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: color-mix(in oklab, var(--card), var(--bg) 10%);
+}
+.back-link:hover{
+    text-decoration: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--ring);
+}
+
+/* ====== Small helpers ====== */
+.row{ display: flex; flex-direction: column; }
+.footer-space{ height: 8px; }
+
+/* ====== Nice focus ring for links ====== */
+a:focus-visible, button:focus-visible, input:focus-visible{
+    outline: none;
+    box-shadow: 0 0 0 4px var(--ring);
+    border-color: var(--primary);
+}
+
+/* ====== Reduce motion ====== */
+@media (prefers-reduced-motion: reduce){
+    *{ transition: none !important; }
 }

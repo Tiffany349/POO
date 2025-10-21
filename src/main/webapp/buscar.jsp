@@ -16,7 +16,7 @@
 <body>
 <h1>Buscar Materiales</h1>
 
-<form action="BuscarServlet" method="get">
+<form action="buscar" method="get">
     <label for="titulo">Título:</label>
     <input type="text" id="titulo" name="titulo"><br>
 
