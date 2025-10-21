@@ -11,7 +11,7 @@
 <body>
 <h1>Biblioteca Metrópolis</h1>
 <a href="mostrarAgregarMaterial">Agregar Material</a>
-<a href="buscarMaterial.jsp">Buscar Material</a>
+<a href="buscar.jsp">Buscar Material</a>
 
 </body>
 </html>
