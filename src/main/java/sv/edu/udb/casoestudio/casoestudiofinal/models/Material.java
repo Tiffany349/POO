@@ -1,73 +1,116 @@
 package sv.edu.udb.casoestudio.casoestudiofinal.models;
 
-import java.util.List;
-
 public class Material {
-    private int id;
-    private String tipo; // libro, enciclopedia, revista, tesis, DVD
+    private int idMaterial;
+    private String tipo;
     private String titulo;
-    private Integer anoPublicacion;
     private String numEdicion;
-    private String pais;
-    private String ciudad;
-    private Editorial editorial;
+    private int anoPublicacion;
     private int cantidad;
     private double precio;
     private String descripcion;
     private String urlTesis;
     private String contactoTesis;
-    private List<Autor> autores;
-    private Autor autorPrincipal;
-    private List<Tag> tags;
+    private int idEditorial;
+    private int idAutorPrincipal;
 
+    // Constructor vacío
     public Material() {}
 
-    // Getters y setters
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    // Getters y Setters
+    public int getIdMaterial() {
+        return idMaterial;
+    }
 
-    public String getTipo() { return tipo; }
-    public void setTipo(String tipo) { this.tipo = tipo; }
+    public void setIdMaterial(int idMaterial) {
+        this.idMaterial = idMaterial;
+    }
 
-    public String getTitulo() { return titulo; }
-    public void setTitulo(String titulo) { this.titulo = titulo; }
+    public String getTipo() {
+        return tipo;
+    }
 
-    public Integer getAnoPublicacion() { return anoPublicacion; }
-    public void setAnoPublicacion(Integer anoPublicacion) { this.anoPublicacion = anoPublicacion; }
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
-    public String getNumEdicion() { return numEdicion; }
-    public void setNumEdicion(String numEdicion) { this.numEdicion = numEdicion; }
+    public String getTitulo() {
+        return titulo;
+    }
 
-    public String getPais() { return pais; }
-    public void setPais(String pais) { this.pais = pais; }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 
-    public String getCiudad() { return ciudad; }
-    public void setCiudad(String ciudad) { this.ciudad = ciudad; }
+    public String getNumEdicion() {
+        return numEdicion;
+    }
 
-    public Editorial getEditorial() { return editorial; }
-    public void setEditorial(Editorial editorial) { this.editorial = editorial; }
+    public void setNumEdicion(String numEdicion) {
+        this.numEdicion = numEdicion;
+    }
 
-    public int getCantidad() { return cantidad; }
-    public void setCantidad(int cantidad) { this.cantidad = cantidad; }
+    public int getAnoPublicacion() {
+        return anoPublicacion;
+    }
 
-    public double getPrecio() { return precio; }
-    public void setPrecio(double precio) { this.precio = precio; }
+    public void setAnoPublicacion(int anoPublicacion) {
+        this.anoPublicacion = anoPublicacion;
+    }
 
-    public String getDescripcion() { return descripcion; }
-    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+    public int getCantidad() {
+        return cantidad;
+    }
 
-    public String getUrlTesis() { return urlTesis; }
-    public void setUrlTesis(String urlTesis) { this.urlTesis = urlTesis; }
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
 
-    public String getContactoTesis() { return contactoTesis; }
-    public void setContactoTesis(String contactoTesis) { this.contactoTesis = contactoTesis; }
+    public double getPrecio() {
+        return precio;
+    }
 
-    public List<Autor> getAutores() { return autores; }
-    public void setAutores(List<Autor> autores) { this.autores = autores; }
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
 
-    public Autor getAutorPrincipal() { return autorPrincipal; }
-    public void setAutorPrincipal(Autor autorPrincipal) { this.autorPrincipal = autorPrincipal; }
+    public String getDescripcion() {
+        return descripcion;
+    }
 
-    public List<Tag> getTags() { return tags; }
-    public void setTags(List<Tag> tags) { this.tags = tags; }
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getUrlTesis() {
+        return urlTesis;
+    }
+
+    public void setUrlTesis(String urlTesis) {
+        this.urlTesis = urlTesis;
+    }
+
+    public String getContactoTesis() {
+        return contactoTesis;
+    }
+
+    public void setContactoTesis(String contactoTesis) {
+        this.contactoTesis = contactoTesis;
+    }
+
+    public int getIdEditorial() {
+        return idEditorial;
+    }
+
+    public void setIdEditorial(int idEditorial) {
+        this.idEditorial = idEditorial;
+    }
+
+    public int getIdAutorPrincipal() {
+        return idAutorPrincipal;
+    }
+
+    public void setIdAutorPrincipal(int idAutorPrincipal) {
+        this.idAutorPrincipal = idAutorPrincipal;
+    }
 }
