@@ -11,7 +11,7 @@
 <html>
 <head>
     <title>Buscar Materiales - Biblioteca Metrópolis</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
 <h1>Buscar Materiales</h1>

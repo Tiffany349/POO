@@ -15,7 +15,7 @@
 <html>
 <head>
     <title>Resultados - Biblioteca Metrópolis</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
 <h1>Resultados de la búsqueda</h1>

@@ -6,7 +6,7 @@
 <html>
 <head>
     <title>Agregar Material - Biblioteca Metrópolis</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 <h1>Biblioteca Metrópolis</h1>
