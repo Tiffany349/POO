@@ -17,7 +17,7 @@ public class AgregarMaterialServlet extends HttpServlet {
     private MaterialDAO dao = new MaterialDAO();
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         String tipo = request.getParameter("tipo");

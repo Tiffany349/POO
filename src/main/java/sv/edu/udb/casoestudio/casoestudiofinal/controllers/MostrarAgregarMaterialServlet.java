@@ -1,4 +1,4 @@
-package sv.edu.udb.casoestudio.casoestudiofinal.servlets;
+package sv.edu.udb.casoestudio.casoestudiofinal.controllers;
 
 import sv.edu.udb.casoestudio.casoestudiofinal.dao.AutorDAO;
 import sv.edu.udb.casoestudio.casoestudiofinal.models.Autor;
