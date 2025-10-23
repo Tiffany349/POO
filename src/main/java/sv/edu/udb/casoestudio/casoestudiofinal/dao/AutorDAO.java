@@ -6,12 +6,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-// Importa la clase de conexión a la base de datos
-import sv.edu.udb.casoestudio.casoestudiofinal.dao.ConexionDB;
-
 public class AutorDAO {
 
-    // Método que lista todos los autores
     public List<Autor> listarTodos() {
         List<Autor> lista = new ArrayList<>();
         String sql = "SELECT id_autor, nombre, email FROM Autor";

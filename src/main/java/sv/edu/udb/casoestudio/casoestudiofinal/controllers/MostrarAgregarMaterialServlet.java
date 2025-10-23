@@ -18,7 +18,7 @@ public class MostrarAgregarMaterialServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Autor> autores = autorDAO.listarTodos(); // método que devuelve todos los autores
+        List<Autor> autores = autorDAO.listarTodos();
         request.setAttribute("autores", autores);
         request.getRequestDispatcher("agregarMaterial.jsp").forward(request, response);
     }
