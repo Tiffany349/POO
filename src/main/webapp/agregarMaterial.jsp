@@ -9,7 +9,7 @@
 <body>
 <h1>Agregar Material</h1>
 
-<form action="AgregarMaterialServlet" method="get">
+<form action="AgregarMaterialServlet" method="post">
     Tipo:
     <select name="tipo" required>
         <option value="Libro">Libro</option>

@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>Biblioteca Metrópolis</h1>
-<a href="mostrarAgregarMaterial">Agregar Material</a>
+<a href="mostrarAgregarMaterial">Agregar nuevo material</a>
 <a href="buscar.jsp">Buscar Material</a>
 
 </body>
